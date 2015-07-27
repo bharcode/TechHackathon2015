@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" ng-app="ngViewEffects">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dev Suite</title>
+    <!--<base href="/">-->
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+  <!-- <link rel="stylesheet" href="css/pagination.css" /> -->
+   <!-- <link rel="stylesheet" href="css/font-awesome.css" /> -->
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <style></style>
+</head>
+
+<body>
+
+    <div style="width:100%;overflow-x:hidden">
+    <!--<div class="navbar-wrapper" ng-controller="HeaderNavCtrl">
+			<nav class="navbar navbar-inverse navbar-static-top" nav-bar menuitems = "menu"></nav>   
+    </div>-->
+
+
+        <div>
+            <div data-ng-view autoscroll="true" class="slide"></div>
+        </div>
+
+        <!-- FOOTER -->
+        <!--<footer class="commmon-footer">
+            <p class="pull-right"><a href="./index.html#">Back to top</a>
+            </p>
+            <p>© AET Big Data Labs @ American Express</p>
+        </footer>-->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.js"></script>
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/pdf.js"></script>
+    <script src="lib/angular-pdf.js"></script>
+    <script src="lib/ng-file-upload-shim.js"></script>
+    <script src="lib/ng-file-upload.js"></script>
+
+    <!--<script src="lib/angular-treeview.js"></script> -->
+
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.js"></script>
+    <script src="resources/coreData.js"></script>
+    <script src="resources/devSuiteMainDesp.js"></script>
+    <script src="resources/capStoneMainDesp.js"></script>
+    <script src="app.js"></script>
+    <script src="directives/navBarDirective.js"></script>
+    <script src="directives/homeMainContentDirective.js"></script>
+    <script src="directives/designMenuBarDirective.js"></script>
+    <script src="directives/teamMainContentDirective.js"></script>
+    <script src="directives/modalDirective.js"></script>
+    <script src="directives/gridPaginateDirective.js"></script>
+
+    <!--<script src="directives/treeGridDirective.js"></script> -->
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+    <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+    <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+
+
+    <script src="controllers/coreController.js"></script>
+    <script src="controllers/devsuite/homeController.js"></script>
+    <script src="controllers/devsuite/planController.js"></script>
+    <script src="controllers/devsuite/designController.js"></script>
+    <script src="controllers/capstone/homeController.js"></script>
+    <script src="controllers/capstone/planController.js"></script>
+    <script src="controllers/capstone/designController.js"></script>
+</body>
+
+</html>
