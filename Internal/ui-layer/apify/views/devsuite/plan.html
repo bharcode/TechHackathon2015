@@ -1,0 +1,40 @@
+<div class="navbar-wrapper" ng-controller="NavCtrl">
+    <div class="navbar-inner" style="background-color: #fff;height:100px">
+        <nav class="navbar navbar-static-top nav-bar-hdr" nav-bar-header menuitems="menu" style="border-bottom:3px solid #0061AE;">
+        </nav>
+    </div>
+    <div class="navbar">
+        <div class="navbar-inner" style="background-color: #0061AE;color:white;width: 70em; margin: 0 auto;margin-top: -25px;">
+            <nav class="navbar navbar-static-top" nav-bar menuitems="menu"></nav>
+        </div>
+    </div>
+</div>
+
+<div ng-controller="CarouselDemoCtrl" class="carousel-wrap main-view-margin">
+    <div style="height: 500px">
+        <carousel interval="myInterval" disable-animation="true">
+            <slide ng-repeat="slide in slides">
+                <img ng-src="{{slide.image}}" style="margin:auto;width:100%;height:500px;">
+                <div class="carousel-caption">
+                    <h4>Slide {{$index}}</h4>
+                    <p>{{slide.text}}</p>
+                </div>
+            </slide>
+        </carousel>
+    </div>
+</div>
+
+<div class="container marketing">
+    <table class="table table-striped" style="margin-top:50px">
+        <thead>
+            <tr>
+                <th ng-repeat="c in ordered_columns">{{ c.title }}
+                </th>
+            </tr>
+            <tbody>
+                <tr ng-repeat="d in data">
+                    <td ng-repeat="c in ordered_columns">{{ d[c.title] }}</td>
+                </tr>
+            </tbody>
+    </table>
+</div>

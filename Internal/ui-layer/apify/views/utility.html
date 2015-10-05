@@ -1,0 +1,74 @@
+<div class="navbar-wrapper" ng-controller="HomeNavCtrl">
+    <div class="navbar-inner" style="background-color: #fff;height:100px">
+        <nav class="navbar navbar-static-top nav-bar-hdr" nav-bar-header menuitems="menu" style="border-bottom:3px solid #0061AE;">
+        </nav>
+    </div>
+    <div class="navbar">
+        <div class="navbar-inner" style="background-color: #0061AE;color:white;width: 70em; margin: 0 auto;margin-top: -25px;">
+            <nav class="navbar navbar-static-top" nav-bar menuitems="menu"></nav>
+        </div>
+    </div>
+</div>
+
+
+<div class="container1 marketing main-view-margin" style="width: 70em;margin: 0 auto;margin-top: 180px;">
+    <!--<div main-content class="main-content" maindesp="maindesp" ng-controller="CoreUtilityDespCtrl"></div>-->
+    <div ng-controller="MyHistCtrl" class="col-sm-12">
+
+        <div class='col-md-12' style="padding:20px;border-radius: 4px;background:#fff">
+
+            <table class="table table-striped table-condensed table-hover">
+                <thead style="background: #0061AE;color:#fff">
+
+                <tr>
+                    <th class="id" custom-sort order="'jarname'" sort="sort" style="color:#fff">Jar Name&nbsp;</th>
+                    <!--<th class="name" custom-sort order="'name'" sort="sort" style="color:#fff">Input Params&nbsp;</th>-->
+                    <th class="description" custom-sort order="'apiname'" sort="sort" style="color:#fff">API Name&nbsp;</th>
+                    <!--<th class="field3" custom-sort order="'field3'" sort="sort" style="color:#fff">Class Name&nbsp;</th>
+                    <th class="field4" custom-sort order="'field4'" sort="sort" style="color:#fff">output Params&nbsp;</th>
+                    <th class="field5" custom-sort order="'field5'" sort="sort" style="color:#fff">Method Name&nbsp;</th>-->
+                    <th class="field5" custom-sort order="'downloadlink'" sort="sort" style="color:#fff">API Specs&nbsp;</th>
+                </tr>
+                </thead>
+                <tfoot>
+                <td colspan="6">
+                    <div class="pagination pull-right">
+                        <ul>
+                            <li ng-class="{disabled: currentPage == 0}">
+                                <a href ng-click="prevPage()">« Prev</a>
+                            </li>
+
+                            <li ng-repeat="n in range(pagedItems.length, currentPage, currentPage + gap) "
+                                ng-class="{active: n == currentPage}"
+                                ng-click="setPage()">
+                                <a href ng-bind="n + 1">1</a>
+                            </li>
+
+                            <li ng-class="{disabled: (currentPage) == pagedItems.length - 1}">
+                                <a href ng-click="nextPage()">Next »</a>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+                </tfoot>
+                <!--<pre>pagedItems.length: {{pagedItems.length|json}}</pre>
+                <pre>currentPage: {{currentPage|json}}</pre>
+                <pre>currentPage: {{sort|json}}</pre>-->
+                <tbody>
+                <tr ng-repeat="item in pagedItems[currentPage] | orderBy:sort.sortingOrder:sort.reverse">
+                    <td>{{item.jarname}}</td>
+                   <!-- <td>{{item.inputparams}}</td>-->
+                    <td>{{item.apiname}}</td>
+                    <!--<td>{{item.classname}}</td>
+                    <td>{{item.outputparams}}</td>
+                    <td>{{item.methodname}}</td>-->
+                    <td><a href={{item.downloadlink}}>download</a></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+
+    </div>
+</div>
